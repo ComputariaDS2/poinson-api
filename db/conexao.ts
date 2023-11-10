@@ -1,7 +1,8 @@
-import { Sequelize } from "sequelize";
+import { Sequelize } from 'sequelize';
 
-export const sequelize = new Sequelize('poison', "root", "",{
+export const sequelize = new Sequelize('poison', 'root', '', {
     host: 'localhost',
-    dialect: "mysql",
-    port: 3307
-})
+    dialect: 'mysql',
+    port: 3306
+});
+
