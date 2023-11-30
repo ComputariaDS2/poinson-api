@@ -46,17 +46,9 @@ expect(mockResponse.json).toHaveBeenCalledWith(mockProduct);
  status: jest.fn().mockReturnThis(),
  } as unknown as Response;
 
-  
-
-
  Product.findByPk = jest.fn().mockResolvedValue(null);
-
-  
  await fetchOneProduct(mockRequest as unknown as Request, mockResponse);
-
-  
  expect(Product.findByPk).toHaveBeenCalledWith('999');
  expect(mockResponse.status).toHaveBeenCalledWith(404);
  expect(mockResponse.json).toHaveBeenCalledWith({ error: 'Product not found' }) });
-
 });
